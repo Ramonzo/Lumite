@@ -1,0 +1,24 @@
+#N canvas 222 44 681 676 10;
+#X obj 100 100 cnv 15 180 89 empty empty Flanger 20 12 0 14 -1 -262144
+0;
+#X obj 100 100 ../diy2/st-flanger;
+#X obj 100 229 s~ effect1l;
+#X obj 100 191 r effect1lv;
+#X obj 100 210 *~;
+#X obj 274 210 *~;
+#X obj 274 191 r effect1rv;
+#X obj 274 229 s~ effect1r;
+#X obj 119 42 r ceffect1;
+#X obj 185 42 r reffect1;
+#X obj 158 65 receivers;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 3 0 4 1;
+#X connect 4 0 2 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 1;
+#X connect 8 0 10 0;
+#X connect 9 0 10 1;
+#X connect 10 0 1 0;
+#X connect 10 1 1 1;
+#X coords 0 -1 1 1 180 89 2 100 100;

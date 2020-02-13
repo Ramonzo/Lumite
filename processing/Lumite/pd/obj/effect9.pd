@@ -1,0 +1,24 @@
+#N canvas 381 41 681 676 10;
+#X obj 100 100 cnv 15 180 65 empty empty Vibrato 20 12 0 14 -1 -262144
+0;
+#X obj 99 186 *~;
+#X obj 272 186 *~;
+#X obj 165 81 receivers;
+#X obj 114 167 r effect9lv;
+#X obj 287 167 r effect9rv;
+#X obj 272 205 s~ effect9r;
+#X obj 99 205 s~ effect9l;
+#X obj 130 62 r ceffect9;
+#X obj 196 62 r reffect9;
+#X obj 100 100 ../diy2/st-vibrato;
+#X connect 1 0 7 0;
+#X connect 2 0 6 0;
+#X connect 3 0 10 0;
+#X connect 3 1 10 1;
+#X connect 4 0 1 1;
+#X connect 5 0 2 1;
+#X connect 8 0 3 0;
+#X connect 9 0 3 1;
+#X connect 10 0 1 0;
+#X connect 10 1 2 0;
+#X coords 0 -1 1 1 180 65 2 100 100;

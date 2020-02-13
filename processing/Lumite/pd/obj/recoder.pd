@@ -1,0 +1,35 @@
+#N canvas 52 104 739 472 10;
+#X obj 100 100 cnv 15 145 44 empty empty Recoder1 20 12 0 14 -1 -262144
+0;
+#X obj 115 167 *~;
+#X obj 187 167 *~;
+#X obj 178 129 hsl 60 10 0 1 0 0 empty empty r -2 -8 0 10 -262144 -1
+-262144 0 1;
+#X obj 108 129 hsl 60 10 0 1 0 0 empty empty l -2 -8 0 10 -262144 -1
+-262144 0 1;
+#X obj 248 79 t \$1 b;
+#X floatatom 248 61 5 0 0 0 - - -;
+#X obj 124 193 writesf~ 2;
+#X obj 140 82 receivers;
+#X obj 130 148 r recoderlv;
+#X obj 202 148 r recoderrv;
+#X obj 248 42 r recoderb;
+#X obj 103 63 r crecoder;
+#X obj 169 63 r rrecoder;
+#X msg 281 98 open ../record/rec1.wav;
+#X connect 1 0 7 0;
+#X connect 2 0 7 1;
+#X connect 5 0 7 0;
+#X connect 5 1 14 0;
+#X connect 6 0 5 0;
+#X connect 8 0 1 0;
+#X connect 8 1 2 0;
+#X connect 9 0 1 1;
+#X connect 9 0 4 0;
+#X connect 10 0 2 1;
+#X connect 10 0 3 0;
+#X connect 11 0 6 0;
+#X connect 12 0 8 0;
+#X connect 13 0 8 1;
+#X connect 14 0 7 0;
+#X coords 0 -1 1 1 145 44 2 100 100;

@@ -1,0 +1,24 @@
+#N canvas 381 41 681 676 10;
+#X obj 100 100 cnv 15 180 65 empty empty Pitch 20 12 0 14 -1 -262144
+0;
+#X obj 99 190 *~;
+#X obj 272 190 *~;
+#X obj 165 81 receivers;
+#X obj 100 100 ../diy2/st-pitchshifter;
+#X obj 130 62 r ceffect6;
+#X obj 196 62 r reffect6;
+#X obj 287 171 r effect6rv;
+#X obj 272 209 s~ effect6r;
+#X obj 99 209 s~ effect6l;
+#X obj 114 171 r effect6lv;
+#X connect 1 0 9 0;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 1 0;
+#X connect 4 1 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 1;
+#X connect 7 0 2 1;
+#X connect 10 0 1 1;
+#X coords 0 -1 1 1 180 65 2 100 100;
