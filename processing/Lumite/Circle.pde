@@ -21,7 +21,7 @@ class Circle {
 
     size = 50;
     connected = new ArrayList<Circle>();
-    line = new Line(pos);
+    line = new Line();
   }
 
   void draw() {
@@ -30,8 +30,7 @@ class Circle {
 
     if (connected.size() > 0) {
       for (Circle c : connected) {
-        line.drawline(this.pos, c.pos, static_color);
-
+        line.drawline(this.pos, c.pos);
         if (linecollision(this.pos, c.pos) && mousePressed && keyPressed == true && keyCode == SHIFT) {
           conn.sendLine("remove", this.name, c.name);
           connected.remove(c);  
@@ -96,7 +95,8 @@ class Circle {
     if (clicked) {
       if (mousePressed) {
         cor = clicked_color;
-        pos = new PVector(mouseX, mouseY);
+        pos.x += mouseX - pmouseX;
+        pos.y += mouseY - pmouseY;
       } else {
         clicked = false;
         mouseDrag = false;

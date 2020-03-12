@@ -1,28 +1,32 @@
 class Line {
-  ////PVector p1;
-  ////float x, y;
-  //PVector pos;
-  
-  Line(PVector pos) {
-    //this.pos = pos;
-    ////p1 = new PVector(this.pos.x, this.pos.y);
-    ////x = p1.x;
-    ////y = p1.y;
+  float gFreq = 400; // frequency
+  float gAmp = 15; // amplitude in pixels
+  float theta = 0.0;
+  float dx;
+  float period = 1000.0;
+  int spacing = 1;
+  Line() {
+    dx = (TWO_PI / period) * spacing;
   }
-  void drawline(PVector pos1, PVector pos2, color cor) {
-    stroke(255);
-    strokeWeight(2);
-    line(pos1.x, pos1.y, pos2.x, pos2.y);
-    strokeWeight(0);
+  void drawline(PVector pos1, PVector pos2) {
+    float d = PVector.dist(pos1,pos2);
+    float a = atan2(pos2.y - pos1.y, pos2.x - pos1.x);
+    float[] values;
+    values = new float[int(d)];
+    fill(255);
+    pushMatrix();
+      translate(pos1.x,pos1.y);
+      rotate(a);
+      beginShape();
+        fill(255);
+        theta += -0.02;
+        float x = theta;
+        for (int i = 0; i < values.length; i++) {
+          ellipse(i, (sin(x*TWO_PI*gFreq/d)*gAmp),1,1);
+          x+= -dx;
+        }
+      endShape();
+    popMatrix();
     
-    //x -= (p1.x - mouseX) / 10;
-    //y -= (p1.y - mouseY) / 10;
-    //fill(cor);
-    //rect(x, y, 5, 5);
-    
-    //if(int(x) == int(pos2.x) || int(y) == int(pos2.y)){
-    //  x = p1.x;
-    //  y = p1.y;
-    //}
   }
 }

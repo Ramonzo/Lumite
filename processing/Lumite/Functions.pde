@@ -17,28 +17,28 @@ void create() {
   //OSCs
   pos = new PVector(240, height-60);
   circles.add(new Circle(pos, color(#B93838), color(150, 150, 150), color(50, 50, 50), "osc1", 1));
-  blocks.add(new Block(pos, color(#B93838), "Osc1"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B93838), "Osc1"));
   controls.add(new Control(circles.get(0), "l", 1, 1));
   controls.add(new Control(circles.get(0), "r", 1, 2));
   controls.add(new Control(circles.get(0), "f", 1000, 3));
 
   pos = new PVector(315, height-60);
   circles.add(new Circle(pos, color(#B77537), color(150, 150, 150), color(50, 50, 50), "osc2", 1));
-  blocks.add(new Block(pos, color(#B77537), "Osc2"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B77537), "Osc2"));
   controls.add(new Control(circles.get(1), "l", 1, 1));
   controls.add(new Control(circles.get(1), "r", 1, 2));
   controls.add(new Control(circles.get(1), "f", 1000, 3));
 
   pos = new PVector(390, height-60);
   circles.add(new Circle(pos, color(#B79C37), color(150, 150, 150), color(50, 50, 50), "osc3", 1));
-  blocks.add(new Block(pos, color(#B79C37), "Osc3"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B79C37), "Osc3"));
   controls.add(new Control(circles.get(2), "l", 1, 1));
   controls.add(new Control(circles.get(2), "r", 1, 2));
   controls.add(new Control(circles.get(2), "f", 1000, 3));
 
   pos = new PVector(465, height-60);
   circles.add(new Circle(pos, color(#B7B737), color(150, 150, 150), color(50, 50, 50), "osc4", 1));
-  blocks.add(new Block(pos, color(#B7B737), "Osc4"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B7B737), "Osc4"));
   controls.add(new Control(circles.get(3), "l", 1, 1));
   controls.add(new Control(circles.get(3), "r", 1, 2));
   controls.add(new Control(circles.get(3), "f", 1000, 3));
@@ -47,13 +47,13 @@ void create() {
   //DA-AD Converters
   pos = new PVector(40, height-60);
   circles.add(new Circle(pos, color(#81B737), color(150, 150, 150), color(50, 50, 50), "adc", 1));
-  blocks.add(new Block(pos, color(#81B737), "ADC Ch1"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#81B737), "ADC Ch1"));
   controls.add(new Control(circles.get(4), "l", 1, 1));
   controls.add(new Control(circles.get(4), "r", 1, 2));
 
   pos = new PVector(115, height-60);
   circles.add(new Circle(pos, color(#4CB737), color(150, 150, 150), color(50, 50, 50), "dac", 2));
-  blocks.add(new Block(pos, color(#4CB737), "DAC Ch1"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#4CB737), "DAC Ch1"));
   controls.add(new Control(circles.get(5), "l", 1, 1));
   controls.add(new Control(circles.get(5), "r", 1, 2));
   //!DA-AD Converters
@@ -61,7 +61,7 @@ void create() {
   //Recorders
   pos = new PVector(940, height-60);
   circles.add(new Circle(pos, color(#37B769), color(150, 150, 150), color(50, 50, 50), "recoder", 2));
-  blocks.add(new Block(pos, color(#37B769), "Recoder"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#37B769), "Recoder"));
   controls.add(new Control(circles.get(6), "l", 1, 1));
   controls.add(new Control(circles.get(6), "r", 1, 2));
   //!Recorders
@@ -69,25 +69,25 @@ void create() {
   //Samplers
   pos = new PVector(590, height-60);
   circles.add(new Circle(pos, color(#37B789), color(150, 150, 150), color(50, 50, 50), "sampler1", 0));
-  blocks.add(new Block(pos, color(#37B789), "Sample1"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#37B789), "Sample1"));
   controls.add(new Control(circles.get(7), "l", 1, 1));
   controls.add(new Control(circles.get(7), "r", 1, 2));
 
   pos = new PVector(665, height-60);
   circles.add(new Circle(pos, color(#37B7AB), color(150, 150, 150), color(50, 50, 50), "sampler2", 0));
-  blocks.add(new Block(pos, color(#37B7AB), "Sample2"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#37B7AB), "Sample2"));
   controls.add(new Control(circles.get(8), "l", 1, 1));
   controls.add(new Control(circles.get(8), "r", 1, 2));
 
   pos = new PVector(740, height-60);
   circles.add(new Circle(pos, color(#379CB7), color(150, 150, 150), color(50, 50, 50), "sampler3", 0));
-  blocks.add(new Block(pos, color(#379CB7), "Sample3"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#379CB7), "Sample3"));
   controls.add(new Control(circles.get(9), "l", 1, 1));
   controls.add(new Control(circles.get(9), "r", 1, 2));
 
   pos = new PVector(815, height-60);
   circles.add(new Circle(pos, color(#3770B7), color(150, 150, 150), color(50, 50, 50), "sampler4", 0));
-  blocks.add(new Block(pos, color(#3770B7), "Sample4"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#3770B7), "Sample4"));
   controls.add(new Control(circles.get(10), "l", 1, 1));
   controls.add(new Control(circles.get(10), "r", 1, 2));
   //!Samplers
@@ -95,7 +95,7 @@ void create() {
   //Effects
   pos = new PVector(40, 60);
   circles.add(new Circle(pos, color(#3F37B7), color(150, 150, 150), color(50, 50, 50), "effect1", 0));
-  blocks.add(new Block(pos, color(#3F37B7), "Flanger"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#3F37B7), "Flanger"));
   controls.add(new Control(circles.get(11), "l", 1, 1));
   controls.add(new Control(circles.get(11), "r", 1, 2));
   controls.add(new Control(circles.get(11), "c", 1, 3));
@@ -104,33 +104,33 @@ void create() {
 
   pos = new PVector(115, 60);
   circles.add(new Circle(pos, color(#5937B7), color(150, 150, 150), color(50, 50, 50), "effect2", 0));
-  blocks.add(new Block(pos, color(#5937B7), "Bitcrusher"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#5937B7), "Bitcrusher"));
   controls.add(new Control(circles.get(12), "l", 1, 1));
   controls.add(new Control(circles.get(12), "r", 1, 2));
   controls.add(new Control(circles.get(12), "c", 1, 3));
 
   pos = new PVector(190, 60);
   circles.add(new Circle(pos, color(#8337B7), color(150, 150, 150), color(50, 50, 50), "effect3", 0));
-  blocks.add(new Block(pos, color(#8337B7), "Resonance"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#8337B7), "Resonance"));
   controls.add(new Control(circles.get(13), "l", 1, 1));
   controls.add(new Control(circles.get(13), "r", 1, 2));
 
   pos = new PVector(265, 60);
   circles.add(new Circle(pos, color(#A137B7), color(150, 150, 150), color(50, 50, 50), "effect4", 0));
-  blocks.add(new Block(pos, color(#A137B7), "DelayFb"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#A137B7), "DelayFb"));
   controls.add(new Control(circles.get(14), "l", 1, 1));
   controls.add(new Control(circles.get(14), "r", 1, 2));
   controls.add(new Control(circles.get(14), "c", 1, 3));
 
   pos = new PVector(340, 60);
   circles.add(new Circle(pos, color(#B737AA), color(150, 150, 150), color(50, 50, 50), "effect5", 0));
-  blocks.add(new Block(pos, color(#B737AA), "NoiseRed"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B737AA), "NoiseRed"));
   controls.add(new Control(circles.get(15), "l", 1, 1));
   controls.add(new Control(circles.get(15), "r", 1, 2));
 
   pos = new PVector(415, 60);
   circles.add(new Circle(pos, color(#B73784), color(150, 150, 150), color(50, 50, 50), "effect6", 0));
-  blocks.add(new Block(pos, color(#B73784), "Pitch"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B73784), "Pitch"));
   controls.add(new Control(circles.get(16), "l", 1, 1));
   controls.add(new Control(circles.get(16), "r", 1, 2));
   controls.add(new Control(circles.get(16), "c", 1, 3));
@@ -138,7 +138,7 @@ void create() {
 
   pos = new PVector(490, 60);
   circles.add(new Circle(pos, color(#B73766), color(150, 150, 150), color(50, 50, 50), "effect7", 0));
-  blocks.add(new Block(pos, color(#B73766), "Shaper"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B73766), "Shaper"));
   controls.add(new Control(circles.get(17), "l", 1, 1));
   controls.add(new Control(circles.get(17), "r", 1, 2));
   controls.add(new Control(circles.get(17), "c", 1, 3));
@@ -146,13 +146,13 @@ void create() {
 
   pos = new PVector(565, 60);
   circles.add(new Circle(pos, color(#B7373A), color(150, 150, 150), color(50, 50, 50), "effect8", 0));
-  blocks.add(new Block(pos, color(#B7373A), "Wave"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B7373A), "Wave"));
   controls.add(new Control(circles.get(18), "l", 1, 1));
   controls.add(new Control(circles.get(18), "r", 1, 2));
 
   pos = new PVector(640, 60);
   circles.add(new Circle(pos, color(#B7373A), color(150, 150, 150), color(50, 50, 50), "effect9", 0));
-  blocks.add(new Block(pos, color(#B7373A), "Vibrato"));
+  blocks.add(new Block(new PVector(pos.x, pos.y), color(#B7373A), "Vibrato"));
   controls.add(new Control(circles.get(19), "l", 1, 1));
   controls.add(new Control(circles.get(19), "r", 1, 2));
   controls.add(new Control(circles.get(19), "c", 1, 3));

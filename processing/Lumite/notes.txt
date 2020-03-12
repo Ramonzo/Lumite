@@ -1,0 +1,22 @@
+marcação do tipo 0 1 e 2
+0 envia e recebe
+1 so envia
+2 so recebe
+
+Effects:
+1- Flanger
+2- Bitcrusher
+3- BodyResonance
+4- Delay Feedback
+5- Noise Reduce
+6- Pitch
+7- Shaper
+8- Wave Distort
+9- vibrato
+
+4 Oscilators - so envia
+1 digital-analog converter - so recebe
+1 analog-digital converter - so envia
+9 effects - envia e recebe
+4 samplers - so envia
+*4 recorders
